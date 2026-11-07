@@ -30,5 +30,13 @@ def encode(input_file):
     pdf.setCreator(f"PDF Encoder v{ENCODER_VERSION}")
     pdf.setAuthor("PDF Encoder - TechNerd64")
 
-    
+    # Calculate the number of squares that can fit in the PDF page
+    columns = int((PAGE_WIDTH - 2 * MARGIN) / SQUARE_SIZE)
+    rows = int((PAGE_HEIGHT - 2 * MARGIN) / SQUARE_SIZE)
+
+    total_capacity = columns * rows
+
+    print(f"Encoding: {filename}")
+    print(f"File size: {len(data)} bytes")
+    print(f"Page capacity: {total_capacity} bytes")
     
