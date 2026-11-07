@@ -1,3 +1,7 @@
 *.pdf
 *.png
+*.sb3
+*.pyc
+*.zip
+*.spec
 __pycache__/
